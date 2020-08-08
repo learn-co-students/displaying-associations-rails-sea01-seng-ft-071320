@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 		@categories = Category.all
 	end
 
-	def create
+  def create
 		post = Post.create(post_params)
 		redirect_to post_path(post)
 	end
@@ -31,6 +31,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :description)
+    params.require(:post).permit(:title, :description, :category_id)
   end
 end
