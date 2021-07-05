@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BlogFlash</title>
+  <title>Bikes</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,6 +9,12 @@
 <body>
 
 <%= yield %>
+<%=link_to "Posts Home", posts_path  %>
+<%= link_to "New Posts", new_post_path%>
+<%= link_to "New Cats", new_category_path%>
+<%= link_to "Cats Home", categories_path%>
+<%# "/post/index" %>
+
 
 </body>
 </html>
